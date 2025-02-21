@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Userpage</title>
+</head>
+<body>
+<h1>Welcome to the userpage!</h1>
+<h2>Enjoy your time here : <span th:text="${username}"></span></h2>
+<p>Click <a th:href="@{/}">here</a> to get to the home page.</p>
+
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</body>
+</html>

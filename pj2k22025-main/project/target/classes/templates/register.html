@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+<form action="/registerSubmit" method="post">
+    <label for="username">Användarnamn:</label>
+    <input id="username" name="username" type="text" required />
+    <br /><br />
+
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" required />
+    <br /><br />
+
+    <label for="role">Roll:</label>
+    <select id="role" name="role" required>
+        <option value="USER">USER</option>
+        <option value="ADMIN">ADMIN</option>
+        <option value="MANAGER">MANAGER</option>
+    </select>
+    <br /><br />
+
+    <button type="submit">Skicka</button>
+    <input type="hidden" name="_csrf" th:value="${_csrf.token}" />
+</form>
+</body>
+</html>

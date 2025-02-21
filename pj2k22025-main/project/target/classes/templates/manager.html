@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manager page</title>
+</head>
+<body>
+<div>
+    <h1>Manager dashboard</h1>
+    <div>
+        <h1>Documents list</h1>
+        <div th:each="doc:${managerInfoList}" class="doc-item">
+            <h2 th:text="${doc.title}">Document title</h2>
+            <p th:text="${doc.infoText}"> Document Description</p>
+        </div>
+
+    </div>
+<h4>Here is the link back to home</h4>
+    <p>Click <a th:href="@{/}">here</a> to get to the home page.</p>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Logout</button>
+</body>
+</html>

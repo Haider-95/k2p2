@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Home page</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+
+<h2> Please choose the link in accordance with your authority</h2>
+
+<p>Click <a th:href="@{/user}">here</a> to get to the user page.</p>
+
+<p>Click <a th:href="@{/admin}">here</a> to get to the admin page.</p>
+
+<p>Click <a th:href="@{/manager}">here</a> to get to the manager page.</p>
+
+
+<form th:action="@{/logout}" method="post">
+  <input type="submit" value="Sign Out"/>
+  <form>
+</body>
+</html>
